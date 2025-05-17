@@ -1,2 +1,23 @@
-# -solve-the-8-puzzle-problem-using-the-A-search-algorithm-
-# Solve-the-8-puzzle-problem-using-the-A-search-algorithm
+
+# 8-Puzzle Problem Solver Using A* Search Algorithm (Python Implementation)
+
+## 项目简介
+本项目基于 Python 实现了经典的 **8-数码拼图问题** 的求解，使用了启发式搜索算法——**A*（A-star）算法**。  
+该算法结合了路径代价和曼哈顿距离启发函数，能够高效地找到从初始状态到目标状态的最优解路径。
+
+## 算法说明
+- **状态表示**：使用一个 3x3 的二维列表表示拼图状态，`0` 表示空格。
+- **启发式函数**：采用曼哈顿距离（Manhattan Distance）计算当前状态与目标状态中每个数字块的距离总和，作为估计代价。
+- **搜索策略**：使用优先队列（堆）维护待探索状态，优先选择总代价（已走步数 + 启发值）最小的状态。
+- **路径回溯**：每个状态保存其父状态，最终可回溯输出解的完整步骤。
+
+## 初始状态
+3 2 4
+5 0 8
+7 6 1
+
+## 目标状态
+
+1 2 3
+8 0 4
+7 6 5
